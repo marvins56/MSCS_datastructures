@@ -1,12 +1,18 @@
 # Iterative Binary Search Function
 # It prints the index of x in given array arr if present,
 # else prints that the element is not present
-def binary_search(arr, x):
+arr = [2, 3, 4, 10, 40, 50, 51, 60, 1]
+
+def binary_search(arr):
+    print(f"enter number to search in the array: {arr}")
+    x= int(input())
+
     low = 0
     high = len(arr) - 1
-
+    # [1,5,6,7]
     while low <= high:
-        mid = (high + low) // 2
+        mid = (high + low) // 2 
+        # looking for the pivot
 
         # Check if x is present at mid
         if arr[mid] == x:
@@ -24,9 +30,5 @@ def binary_search(arr, x):
     # If we reach here, the element was not present
     print("Element is not present in array")
 
-# Test array
-arr = [2, 3, 4, 10, 40, 50, 51, 60, 1]
-x = 60
-
 # Function call
-binary_search(arr, x)
+binary_search(arr)
